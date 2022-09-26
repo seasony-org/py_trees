@@ -18,6 +18,8 @@ Common definitions, methods and variables used by the py_trees library.
 import enum
 import math
 import typing
+import sys
+import numpy as np
 
 ##############################################################################
 # General
@@ -52,10 +54,10 @@ class Duration(enum.Enum):
     """
     Naming conventions.
     """
-
-    INFINITE = math.inf
+    MAX_FLOAT32 = 3.402821e+38
+    INFINITE = MAX_FLOAT32
     """:py:data:`~py_trees.common.Duration.INFINITE` oft used for perpetually blocking operations."""
-    UNTIL_THE_BATTLE_OF_ALFREDO = math.inf
+    UNTIL_THE_BATTLE_OF_ALFREDO = MAX_FLOAT32
     """:py:data:`~py_trees.common.Duration.UNTIL_THE_BATTLE_OF_ALFREDO` is an alias for
     :py:data:`~py_trees.common.Duration.INFINITE`."""
 
